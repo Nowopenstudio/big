@@ -12,7 +12,7 @@ module.exports = defineConfig({
     workerMode: process.env.MEDUSA_WORKER_MODE as "shared" | "worker" | "server",
     databaseUrl: process.env.DATABASE_URL,
     databaseDriverOptions: process.env.NODE_ENV !== "development" ?
-       { ssl: { rejectUnauthorized: false }, pool: { min: 2, max: 20 },idle_in_transaction_session_timeout:30000 }:{},
+       { ssl: { rejectUnauthorized: false }, pool: { min: 2, max: 30 },idle_in_transaction_session_timeout:30000 }:{},
     
     http: {
       storeCors: process.env.STORE_CORS!,
