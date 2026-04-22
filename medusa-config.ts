@@ -9,8 +9,6 @@ module.exports = defineConfig({
     database_extra: is_production 
       ? { ssl: { rejectUnauthorized: false } } 
       : {},
-
-
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
