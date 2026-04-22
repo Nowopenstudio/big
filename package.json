@@ -27,7 +27,8 @@
     "@medusajs/cli": "2.13.6",
     "@medusajs/framework": "2.13.6",
     "@medusajs/medusa": "2.13.6",
-    "@sanity/client": "^7.21.0"
+    "@sanity/client": "^7.21.0",
+    "redis-cli": "^2.1.2"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.13.6",
