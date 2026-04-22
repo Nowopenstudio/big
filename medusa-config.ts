@@ -7,7 +7,7 @@ module.exports = defineConfig({
     redisUrl: process.env.REDIS_URL,
     databaseUrl: process.env.DATABASE_URL,
     databaseDriverOptions: process.env.NODE_ENV !== "development" ?
-       { ssl: { rejectUnauthorized: false }, pool: { min: 0, max: 10 },idle_in_transaction_session_timeout:10000 }:{},
+       { ssl: { rejectUnauthorized: false }, pool: { min: 1, max: 20 },idle_in_transaction_session_timeout:10000 }:{},
 
     http: {
       storeCors: process.env.STORE_CORS!,
