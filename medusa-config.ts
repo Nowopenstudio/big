@@ -10,7 +10,7 @@ module.exports = defineConfig({
     //    { ssl: { rejectUnauthorized: false }, pool: { min: 2, max: 20 },idle_in_transaction_session_timeout:30000 }:{},
 
     http: {
-      storeCors: "/vercel\\.app$/",
+      storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
       authCors: process.env.AUTH_CORS!,
       jwtSecret: process.env.JWT_SECRET || "supersecret",
