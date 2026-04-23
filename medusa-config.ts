@@ -4,8 +4,10 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
+
     databaseUrl: process.env.DATABASE_URL,
-  
+    // databaseDriverOptions: process.env.NODE_ENV !== "development" ?
+    //    { ssl: { rejectUnauthorized: false }, pool: { min: 2, max: 20 },idle_in_transaction_session_timeout:30000 }:{},
 
     http: {
       storeCors: process.env.STORE_CORS!,
